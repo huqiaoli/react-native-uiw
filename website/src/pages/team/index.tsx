@@ -5,10 +5,10 @@ import ButtonStyle from '../../component/ButtonStyle';
 import styles from './index.module.less';
 import FooterTitle from '../../component/Footer';
 
-const data: { username: string; nickname?: string; }[] = [
+const data: { username: string; nickname?: string }[] = [
   { username: 'yaochuxia' },
   { username: 'xingyuefeng', nickname: 'xyf' },
-  { username: 'ChenlingasMx', nickname: "Chenling" },
+  { username: 'ChenlingasMx', nickname: 'Chenling' },
   { username: 'matuancc', nickname: 'cc' },
   { username: 'wj0990', nickname: 'wangjie' },
   { username: 'yaob421123', nickname: 'yaobin' },
@@ -19,7 +19,7 @@ const data: { username: string; nickname?: string; }[] = [
   { username: 'zuojiahui', nickname: '左嘉辉' },
   { username: 'hy916', nickname: 'huyi' },
   { username: 'dibenny', nickname: 'dibenny' },
-  { username: 'hy916', nickname: 'hy916' },
+  { username: 'huqiaoli', nickname: 'huqiaoli' },
 ];
 
 export default function Team(props: DefaultProps) {
@@ -51,7 +51,7 @@ export default function Team(props: DefaultProps) {
           </ButtonStyle>
         </div>
       </article>
-      < FooterTitle />
+      <FooterTitle />
     </Fragment>
   );
 }

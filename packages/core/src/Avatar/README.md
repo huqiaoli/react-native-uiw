@@ -3,7 +3,9 @@ Avatar 头像
 
 用来代表用户或事物，支持图片展示，当前是基于 React Native 组件 Image 封装，你也可以使用更快的图片展示插件 [react-native-fast-image](https://github.com/DylanVann/react-native-fast-image)。
 
-## 基础示例
+<image src='https://user-images.githubusercontent.com/57083007/137631738-4338453c-c552-4caa-9261-8fd84c018942.png' alt='Avatar' style='zoom:33%;' />
+
+### 基础示例
 
 ```jsx
 import { View } from 'react-native';
@@ -16,20 +18,37 @@ function Demo() {
     <View style={{ flexDirection: 'row' }}>
       <Avatar src="https://xx.images.com/xxx/icon.png" />
       <Avatar src={uri} />
-      <Avatar src={require('./1.png')} />
     </View>
   );
 }
 ```
 
-## props
+### props
 
 继承 [View](https://facebook.github.io/react-native/docs/view#props) 组件。
 
-| 参数 | 说明 | 类型 | 默认值 |
-|------|------|-----|------|
-| `src` | 图像源（远程URL或本地文件资源）。 | String/Number | - |
-| `imageProps` | React Native `Image` 组件 Props | ImageProps | - |
-| `size` | 设置圆角 | Number | `40` |
-| `rounded` | 设置圆角 | Number | `3` |
-| `shape` | 指定头像的形状 `square` 正方形或者 `circle` 圆 | `circle`/`square` | `square` |
+```ts
+import { ViewProps } from 'react-native';
+
+export interface AvatarProps extends ViewProps {
+  /** React Native `Image` 组件 Props */
+  imageProps?: ImageProps;
+  /** 图像源（远程URL或本地文件资源）。 */
+  src?: string | number;
+  /**
+   * 尺寸
+   * @default 40
+   */
+  size?: number;
+  /**
+   * 设置圆角
+   * @default 3
+   */
+  rounded?: number;
+  /**
+   * 指定头像的形状
+   * @default square
+   */
+  shape?: 'circle' | 'square';
+}
+```

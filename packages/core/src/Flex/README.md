@@ -4,7 +4,7 @@ Flex Flex布局
 
 Flex 是 React Native CSS flex 布局的一个封装。
 
-## 基础示例
+### 基础示例
 
 ```jsx
 import { Fragment } from 'react';
@@ -29,7 +29,7 @@ function Demo() {
 }
 ```
 
-## 对齐方式
+### 对齐方式
 
 ```jsx
 import { Fragment } from 'react';
@@ -64,17 +64,40 @@ function Demo() {
 }
 ```
 
-## Props
+### Props
 
 ### Flex
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| `direction` | 项目定位方向 | `row`, `column`, `row-reverse`, `column-reverse` | `row` |
-| `wrap` | 子元素的换行方式 | `wrap`, `nowrap`, `wrap-reverse`, `nowrap` |
-| `justify` | 子元素在主轴上的对齐方式 | `start`, `end`, `center`, `between`, `around` | `start` |
-| `align` | 子元素在交叉轴上的对齐方式 | `start`, `end`, `center`, `stretch`, `baseline` | `start` |
+```ts
+export interface FlexProps extends ViewProps {
+  /**
+   * 项目定位方向
+   * `row`, `column`, `row-reverse`, `column-reverse`
+   * @default row
+   */
+  direction?: FlexStyle['flexDirection'];
+  /**
+   * 子元素在主轴上的对齐方式
+   * @default start
+   */
+  justify?: 'start' | 'end' | 'center' | 'between' | 'around';
+  /**
+   * 子元素在交叉轴上的对齐方式
+   * @default start
+   */
+  align?: 'start' | 'end' | 'center' | 'stretch' | 'baseline';
+  /**
+   * 子元素的换行方式
+   * @default nowrap
+   */
+  wrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
+}
+```
 
 ### Flex.Item
 
 继承 [View](https://facebook.github.io/react-native/docs/view#props) 组件。
+
+```ts
+export interface FlexItemProps extends ViewProps {}
+```

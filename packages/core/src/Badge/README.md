@@ -1,7 +1,9 @@
 Badge 标记
 ---
 
-## 基础示例
+<image src='https://user-images.githubusercontent.com/57083007/137631808-f3899eb4-69c1-4dd5-a686-0f8bb38fe4b6.png' alt='Badge' style='zoom:33%;' />
+
+### 基础示例
 
 ```jsx
 import { View, Text } from 'react-native';
@@ -17,13 +19,26 @@ function Demo() {
 }
 ```
 
-## props
+### Props
 
 继承 [View](https://facebook.github.io/react-native/docs/view#props) 组件。
 
-| 参数 | 说明 | 类型 | 默认值 |
-|------|------|-----|------|
-| `text` | 文本内容 | String | - |
-| `color` | 标记颜色 | String | - |
-| `rounded` | 设置圆角 | Number | `5` |
-| `textStyles` | 文本样式 | String | - |
+```ts
+import { ViewProps } from 'react-native';
+
+export interface BadgeProps extends ViewProps {
+  children?: React.ReactNode;
+  /** 标记颜色 */
+  color?: colors.Colors | string;
+  /** 文本内容 */
+  text?: string | Element;
+  /**
+   * 设置圆角，默认 `12`
+   */
+  rounded?: number;
+  /** 设置类型 */
+  type?: 'dot' | 'text';
+  /** 文本样式 */
+  textStyles?: StyleProp<TextStyle>;
+}
+```

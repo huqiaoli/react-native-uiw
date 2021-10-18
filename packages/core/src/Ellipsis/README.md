@@ -3,11 +3,10 @@ Ellipsis 超出省略
 
 用于文本过长，超出长度显示 `...`。
 
-## 基础示例
+### 基础示例
 
 ```jsx
 import { Fragment } from 'react';
-import { View, Text } from 'react-native';
 import { Ellipsis } from '@uiw/react-native';
 
 function Demo() {
@@ -20,7 +19,7 @@ function Demo() {
 }
 ```
 
-## Props
+### Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 |------|------|-----|------|

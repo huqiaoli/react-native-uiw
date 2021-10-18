@@ -1,4 +1,4 @@
-import { StackNavigationProp } from '@react-navigation/stack';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 type ModalStackNavigation = StackNavigationProp<{}>;
 
@@ -343,8 +343,9 @@ export const stackPageData: Routes[] = [
     component: require('./routes/SpeedDial').default,
     params: {
       title: 'SpeedDial 悬浮标记',
-      description: 'SpeedDial 悬浮标记组件按下时，浮动动作按钮可以以快速显示标记的形式显示指定相关动作。',
-    }
+      description:
+        'SpeedDial 悬浮标记组件按下时，浮动动作按钮可以以快速显示标记的形式显示指定相关动作。',
+    },
   },
   {
     name: 'Swiper',
@@ -355,11 +356,75 @@ export const stackPageData: Routes[] = [
     },
   },
   {
+    name: 'Tile',
+    component: require('./routes/Tile').default,
+    params: {
+      title: 'Tile',
+      description: 'Tile 卡片',
+    },
+  },
+  {
+    name: 'TransitionImage',
+    component: require('./routes/TransitionImage').default,
+    params: {
+      title: 'TransitionImage',
+      description: 'TransitionImage 图片过渡',
+    },
+  },
+  // {
+  //   name: 'Card',
+  //   component: require('./routes/Card').default,
+  //   params: {
+  //     title: 'Card 卡片',
+  //     description: 'QuickList 最基础的卡片容器，可承载文字、列表、图片、段落。',
+  //   },
+  // },
+  {
     name: 'Progress',
     component: require('./routes/Progress').default,
     params: {
       title: 'Progress 进度条',
       description: 'Progress 表明某个任务的当前进度',
+    },
+  },
+  {
+    name: 'Tooltip',
+    component: require('./routes/Tooltip').default,
+    params: {
+      title: 'Tooltip 工具提示',
+      description: '当用户点击元素时，工具提示将显示信息',
+    },
+  },
+  {
+    name: 'CardCollapse',
+    component: require('./routes/CardCollapse').default,
+    params: {
+      title: 'CardCollapse 折叠卡片列表',
+      description: '可折叠卡片列表',
+    },
+  },
+  {
+    name: 'ActionSheet',
+    component: require('./routes/ActionSheet').default,
+    params: {
+      title: 'ActionSheet 动作面板',
+      description: '该组件提供了一种动作面板, 底部缓缓出现',
+    },
+  },
+  {
+    name: 'SearchInputBar',
+    component: require('./routes/SearchInputBar').default,
+    params: {
+      title: 'SearchInputBar 搜索栏',
+      description: '可用于用户输入搜索信息',
+    },
+  },
+  {
+    name: 'Pagination',
+    component: require('./routes/Pagination').default,
+    params: {
+      title: 'Pagination 分页器',
+      description: '用于展示页码、请求数据等。',
     },
   },
 ];
